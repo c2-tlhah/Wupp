@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PageHeading, route } from "../components";
 import { featureGroups } from "../content";
 import { queryValue, updateQuery } from "../query";
 
 export function Features() {
-  const [search, setSearch] = useState(() => queryValue("q") || "");
+  const [search, setSearch] = useState("");
+  useEffect(() => setSearch(queryValue("q") || ""), []);
   const query = search.trim().toLowerCase();
   const visible = featureGroups
     .map((group) => ({

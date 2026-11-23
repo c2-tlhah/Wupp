@@ -41,7 +41,7 @@ export function Download() {
         <div className="layout-width download-hero-grid">
           <PageHeading
             kind="Wupp for Android"
-            title="Your next chat starts here."
+            title="Download Wupp for Android."
             lead="Choose the current stable build for your phone. Downloads come from the project’s GitHub release, with a file hash list alongside them."
           />
           <div className="download-hero-note">

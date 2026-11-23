@@ -119,8 +119,9 @@ export function Home() {
             </span>
             <h1>Make room for your kind of messaging.</h1>
             <p className="hero-lead">
-              The people stay the same. You get more say in how you show up,
-              what you keep, and how your chats feel.
+              Wupp is an independent Android companion for your existing
+              WhatsApp account. Keep the people and chats you know, with more
+              say in how you show up, what you save, and how it all looks.
             </p>
             <div className="action-row">
               <a className="button primary" href={route("download/")}>

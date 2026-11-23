@@ -1,5 +1,5 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { Layout } from "./components";
 import { Home } from "./pages/Home";
 import { Features } from "./pages/Features";
@@ -27,10 +27,14 @@ const pagePath = window.location.pathname
 const current = pagePath ? `${pagePath}/` : "";
 const Page = pages[current] || Home;
 
-createRoot(document.getElementById("root")).render(
+const root = document.getElementById("root");
+const app = (
   <React.StrictMode>
     <Layout current={current}>
       <Page />
     </Layout>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
+
+if (root.hasChildNodes()) hydrateRoot(root, app);
+else createRoot(root).render(app);

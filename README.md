@@ -16,6 +16,7 @@
 </p>
 
 <p align="center">
+  <a href="https://wuppp.vercel.app/"><b>Wupp website</b></a> ·
   <a href="https://github.com/hanzalaramz/Wupp/releases"><b>Download latest APK from Releases</b></a> ·
   <a href="https://github.com/hanzalaramz/Wupp/discussions"><b>Community Discussions</b></a>
 </p>
@@ -63,7 +64,7 @@ Under the hood, a native Rust library (`whatsbridge_rs`, built on `whatsapp-rust
 ## Get started
 
 1. Keep your **official WhatsApp app installed and logged in** on your primary phone.
-2. Download an APK from [Releases](https://github.com/hanzalaramz/Wupp/releases) (`arm64-v8a` for modern 64-bit phones, or `universal` for older 32-bit, x86, or mixed devices) and open it on an Android 8.0 or newer phone. Android will ask once to allow app installs from your browser or file manager.
+2. Download an APK from [Releases](https://github.com/hanzalaramz/Wupp/releases) and open it on an arm64-v8a phone running Android 8.0 or newer. The current `universal` APK still needs an arm64-v8a phone because the native engine is not packaged for 32-bit or x86 devices. Android will ask once to allow app installs from your browser or file manager.
 3. Walk through the first-launch setup screen so notification, media, and background-running permissions are granted.
 4. Link your WhatsApp account on the setup login screen using either a QR code scan or a phone number link code from **Linked devices** in your primary WhatsApp app.
 

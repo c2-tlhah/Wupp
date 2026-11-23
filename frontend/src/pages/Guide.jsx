@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { External, FaqList, PageHeading, route } from "../components";
 import { faqs, links } from "../content";
 import { queryValue, updateQuery } from "../query";
 
 export function Guide() {
-  const [method, setMethod] = useState(() =>
-    queryValue("method") === "code" ? "code" : "qr",
-  );
+  const [method, setMethod] = useState("qr");
+  useEffect(() => {
+    if (queryValue("method") === "code") setMethod("code");
+  }, []);
   const chooseMethod = (value) => {
     setMethod(value);
     updateQuery("method", value === "qr" ? "" : value);
@@ -17,7 +18,7 @@ export function Guide() {
         <div className="layout-width guide-hero-grid">
           <PageHeading
             kind="Before your first chat"
-            title="Keep your account. Add another way in."
+            title="Link Wupp to your account."
             lead="Wupp links to the account you already use. Your primary phone stays in charge, and setup takes just a few clear steps."
           />
           <div className="guide-hero-art" aria-hidden="true">
